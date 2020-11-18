@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 6px;
+    padding: 6px;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+}
+
+
+/****** GENERAL STYLING ******/
+
+body {
+    margin: auto;
+    height: 100%;
+    width: 90%;
+}
+
+h3 {
+    margin: 40px 0 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+a {
+    color: #43AA8B;
+}
+
+.v-toast__item--success {
+    background-color: #43AA8B !important;
+}
+
+.v-toast__item--error {
+    background-color: #F94144 !important;
+}
+
+.v-toast__item--warning {
+    background-color: #F9C74F !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+    opacity: 0
+}
+
+.main-container {
+
+}
+
+.app-nav {
+
+}
+
+#nav {
+    padding: 30px;
+}
+
+#nav a {
+    font-weight: bold;
+    color: #577590;
+}
+
+#nav a.router-link-exact-active {
+    color: #90BE6D;
+
+}
+
+.btnless {
+    border: 0;
+    box-sizing: border-box;
+    margin: 6px;
+    padding: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    color: #43AA8B;
+    background-color: #FFFFFF;
+    text-decoration: underline;
+
+}
+
+.main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.App_footer {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+
+}
+
+.footer-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    border-top: solid 2px #2c3e50;
+    text-align: center;
+}
