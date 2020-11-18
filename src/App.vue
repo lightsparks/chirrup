@@ -1,6 +1,8 @@
 <template>
     <div id="app">
 
+        <router-link to="profile"><h1>Chirrup</h1></router-link>
+
         <transition
                 name="fade"
                 mode="out-in"

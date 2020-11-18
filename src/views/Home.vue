@@ -5,8 +5,6 @@
             <router-link to="/">Log in</router-link>
             |
             <router-link to="/register-new-user">Register</router-link>
-            |
-            <router-link to="/user">Dashboard</router-link>
         </nav>
 
         <form class="container_column">
