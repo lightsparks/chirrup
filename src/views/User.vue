@@ -1,11 +1,8 @@
 <template>
     <div id="main">
 
-
-
         <div class="main-container">
 
-            <router-link to="profile"><h1>Chirrup</h1></router-link>
             <nav class="app-nav">
                 <router-link to="profile">Profile</router-link>
                 |

@@ -94,7 +94,10 @@ a {
     color: #43AA8B;
     background-color: #FFFFFF;
     text-decoration: underline;
+}
 
+.btnless:hover {
+    cursor: pointer;
 }
 
 .main {
