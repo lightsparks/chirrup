@@ -39,6 +39,6 @@
     </div>
 </template>
 
-<style type=text/css src="Login.css"></style>
+<style type=text/css src="./Login.css"></style>
 
-<script src="Login.js"></script>
+<script src="./Login.js"></script>

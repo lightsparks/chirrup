@@ -13,8 +13,8 @@ Vue.use(VueToast);
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "Home" */ '../views/Home.vue')
+    name: 'Login',
+    component: () => import(/* webpackChunkName: "Home" */ '../views/Login.vue')
   },
   {
     path: '/register-new-user',
@@ -26,10 +26,10 @@ const routes = [
         import(/* webpackChunkName: "Register" */ '../views/Register.vue')
   },
   {
-    path: "/user",
-    name: "User",
+    path: "/Home",
+    name: "Home",
     component: () =>
-        import(/* webpackChunkName: "User" */ '../views/User.vue'),
+        import(/* webpackChunkName: "User" */ '../views/Home.vue'),
     meta: {requiresAuth: true}
   },
   {
