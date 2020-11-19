@@ -1,7 +1,7 @@
 <template>
     <div id="app">
 
-        <router-link to="User"><h1>Chirrup</h1></router-link>
+        <router-link to="Home"><h1>Chirrup</h1></router-link>
 
         <transition
                 name="fade"
