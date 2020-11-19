@@ -43,10 +43,11 @@ export default {
                     this.success = true;
                     this.$toast.open({
                         message: 'User login succesful!',
-                        type: 'success'
+                        type: 'success',
+                        position: 'bottom'
                     });
                     setTimeout(() => {
-                        this.$router.push('User');
+                        this.$router.push('Home');
                     }, 1000);
 
                 })
@@ -55,7 +56,8 @@ export default {
                     console.log(this.login_error);
                     this.$toast.open({
                         message: 'User login failed',
-                        type: 'error'
+                        type: 'error',
+                        position: 'bottom'
                     })
                 })
         },

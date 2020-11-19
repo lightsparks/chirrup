@@ -8,7 +8,8 @@ export default {
             localStorage.removeItem('token');
             this.$toast.open({
                 message: 'User logged out',
-                type: 'default'
+                type: 'default',
+                position: 'bottom'
             });
             setTimeout(() => {
                 this.$router.push('/');

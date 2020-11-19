@@ -2,7 +2,7 @@
 
     <div class="login_user">
         <nav id="nav">
-            <router-link to="Login">Log in</router-link>
+            <router-link to="/">Log in</router-link>
             |
             <router-link to="/register-new-user">Register</router-link>
         </nav>

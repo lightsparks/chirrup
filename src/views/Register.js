@@ -47,10 +47,11 @@ export default {
                     console.log(response);
                     this.$toast.open({
                         message: 'New user registration succesful',
-                        type: 'success'
+                        type: 'success',
+                        position: 'bottom'
                     });
                     setTimeout(() => {
-                        this.$router.push('User');
+                        this.$router.push('Home');
                     }, 1000);
                 })
                 .catch(error => {

@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "Home" */ '../views/Login.vue')
+    component: () => import(/* webpackChunkName: "Login" */ '../views/Login.vue')
   },
   {
     path: '/register-new-user',
@@ -29,7 +29,7 @@ const routes = [
     path: "/Home",
     name: "Home",
     component: () =>
-        import(/* webpackChunkName: "User" */ '../views/Home.vue'),
+        import(/* webpackChunkName: "Home" */ '../views/Home.vue'),
     meta: {requiresAuth: true}
   },
   {
@@ -51,7 +51,7 @@ router.beforeEach((to, from, next) => {
   if(to.matched.some(record => record.meta.requiresAuth)){
     if(localStorage.getItem('token') === null) {
       next({
-        name: 'Home'
+        name: '/'
       });
     } else {
         next();
