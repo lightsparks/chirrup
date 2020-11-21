@@ -58,32 +58,6 @@ export default {
                     position: "bottom"
                 });
             });
-
-            /*axios.post('https://twitterclone.tk/api/auth/login', this.userAuth)
-                .then((response) => {
-                    console.log(response);
-                    localStorage.setItem('token', JSON.stringify(response.data));
-                    this.success = true;
-                    this.$toast.open({
-                        message: 'User login succesful!',
-                        type: 'success',
-                        position: 'bottom',
-                        duration: 2000
-                    });
-                    setTimeout(() => {
-                        this.$router.push('Home');
-                    }, 1000);
-
-                })
-                .catch(error => {
-                    this.login_error = error.response ? error.response.data : '';
-                    console.log(this.login_error);
-                    this.$toast.open({
-                        message: 'User login failed',
-                        type: 'error',
-                        position: 'bottom'
-                    })
-                })*/
         }
     }
 };
