@@ -1,11 +1,10 @@
-import axios from "axios";
+import {messages} from "@/services/httpService";
 
 export default {
     data() {
         return {
             message_error: {},
             headers: {},
-
         }
     },
 
@@ -26,7 +25,14 @@ export default {
 
     methods: {
         getMessage: function() {
-            axios.post('http://twitterclone-dev.tk/api/messages')
+
+            messages().then(() => {
+
+            }).catch(() => {
+
+            });
+
+            /*axios.post('http://twitterclone-dev.tk/api/messages')
                 .then((response) => {
                     console.log(response);
 
@@ -35,7 +41,7 @@ export default {
                 .catch(error => {
                     this.message_error = error.response ? error.response.data : '';
                     console.log(this.message_error);
-                });
+                });*/
         },
         logOut: function() {
             localStorage.removeItem('token');
