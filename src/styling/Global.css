@@ -60,11 +60,30 @@ a {
 }
 
 .main-container {
-
+    display: flex;
+    flex-direction: row nowrap;
+    width: 80%;
 }
 
-.app-nav {
+main.app-main {
+    border: 1px solid #277DA1;
+    border-radius: 10px;
+    width: 800px;
+    margin-left: 25px;
+}
 
+nav.app-nav {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+    align-items: left;
+    width: 100px;
+}
+
+nav.app-nav a, button {
+    padding: 0px;
+    margin: 0px;
 }
 
 #nav {

@@ -5,14 +5,12 @@
 
             <nav class="app-nav">
                 <router-link to="profile">Profile</router-link>
-                |
                 <router-link to="messages">Messages</router-link>
-                |
                 <button class="btnless" @click="logOut">Log out</button>
             </nav>
 
             <main class="app-main">
-
+                <button @click="getMessage" class="btnless">Get messages</button>
             </main>
         </div>
 

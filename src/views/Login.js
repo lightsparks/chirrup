@@ -44,7 +44,8 @@ export default {
                     this.$toast.open({
                         message: 'User login succesful!',
                         type: 'success',
-                        position: 'bottom'
+                        position: 'bottom',
+                        duration: 2000
                     });
                     setTimeout(() => {
                         this.$router.push('Home');
