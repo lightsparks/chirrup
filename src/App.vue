@@ -17,6 +17,8 @@
     </div>
 </template>
 
+<style src="./styling/Global.css"></style>
+
 <style>
     * {
         font-family: 'Poppins', sans-serif;
@@ -64,7 +66,4 @@
         color: #42b983;
 
     }
-
-
-
 </style>

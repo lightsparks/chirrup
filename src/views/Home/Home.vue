@@ -19,4 +19,3 @@
 
 <script src="./Home.js"></script>
 
-<style src="../styling/Global.css"></style>
