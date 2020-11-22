@@ -12,6 +12,10 @@ export const messages = () => {
     return get([ "messages" ]);
 };
 
+export const sendNewMessage = () => {
+    return get([ "sendNewMessage" ]);
+};
+
 /**
  * Post Request
  *

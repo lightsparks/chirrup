@@ -32,7 +32,7 @@
 <!--
             <button @click.prevent="loginUser" v-bind:disabled="!isFormValid">Log in</button>
 -->
-            <button @click.prevent="loginUser">Log in</button>
+            <button @click.prevent="loginUser" class="button">Log in</button>
 
         </form>
 

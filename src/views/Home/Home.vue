@@ -3,19 +3,22 @@
 
         <div class="main-container">
 
-            <nav class="app-nav">
-                <router-link to="profile">Profile</router-link>
-                <router-link to="messages">Messages</router-link>
-                <button class="btnless" @click="logOut">Log out</button>
-            </nav>
+            <navbar></navbar>
 
             <main class="app-main">
-                <button @click="getMessage" class="btnless">Get messages</button>
+                <button @click="getMessage()" class="btnless">Get messages</button>
             </main>
+
         </div>
 
     </div>
 </template>
 
-<script src="./Home.js"></script>
+<script>
+    import navbar from "../../components/NavBar";
+    export default {
+        components: {navbar}
+    }
+</script>
 
+<script src="./Home.js"></script>

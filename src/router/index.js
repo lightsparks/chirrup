@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import NavBar from '@/components/NavBar.vue';
 import VueToast from 'vue-toast-notification';
 
 // Import one of available themes
@@ -8,7 +9,7 @@ import 'vue-toast-notification/dist/theme-sugar.css';
 
 Vue.use(VueRouter)
 Vue.use(VueToast);
-
+Vue.component('navbar', NavBar);
 
 const routes = [
   {
@@ -30,6 +31,20 @@ const routes = [
     name: "Home",
     component: () =>
         import(/* webpackChunkName: "Home" */ '../views/Home/Home.vue'),
+    meta: {requiresAuth: true}
+  },
+  {
+    path: "/SendMessage",
+    name: "SendMessage",
+    component: () =>
+        import(/* webpackChunkName: "SendMessage" */ '../views/SendMessage/SendMessage.vue'),
+    meta: {requiresAuth: true}
+  },
+  {
+    path: "/Logout",
+    name: "Logout",
+    component: () =>
+        import(/* webpackChunkName: "Logout" */ '../views/Logout/Logout.vue'),
     meta: {requiresAuth: true}
   },
   {

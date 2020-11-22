@@ -1,5 +1,5 @@
-import { messages } from "@/services/httpService";
-import navbar from "../../components/NavBar";
+import { sendNewMessage } from "@/services/httpService";
+import navbar from "../../components/NavBar.vue";
 
 export default {
     data() {
@@ -7,25 +7,14 @@ export default {
             components: {navbar},
             message_error: {},
             headers: {},
-            messages: {}
+            newMessage: '',
         }
     },
 
-    /*mounted: {
-        getMessage: function() {
-
-            messages().then(() => {
-
-            }).catch(() => {
-
-            });
-        },
-    },*/
-
     methods: {
-        getMessage: function() {
+        sendNewMessage: function() {
 
-            messages().then(() => {
+            sendNewMessage().then(() => {
 
             }).catch(() => {
 
