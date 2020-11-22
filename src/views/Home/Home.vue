@@ -6,7 +6,14 @@
             <navbar></navbar>
 
             <main class="app-main">
-                <button @click="getMessage()" class="btnless">Get messages</button>
+                <button @click="getMessages" class="button">Refresh</button>
+                <!--<div class="feed-container" v-for="message in message_data">
+                    <div class="message-container" >
+                        <div class="message-content"></div>
+                        <div class="timestamp"></div>
+                        <div class="userID"></div>
+                    </div>
+                </div>-->
             </main>
 
         </div>

@@ -1,6 +1,6 @@
 <template>
     <nav class="app-nav">
-        <router-link to="Home">Feed</router-link>
+        <router-link to="Home">Home</router-link>
         <router-link to="SendMessage">Send Message</router-link>
         <!--<router-link to="profile">Profile</router-link>-->
         <router-link to="Logout">Logout</router-link>

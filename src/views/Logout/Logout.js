@@ -12,7 +12,8 @@ export default {
             this.$toast.open({
                 message: 'User logged out',
                 type: 'default',
-                position: 'bottom'
+                position: 'bottom',
+                duration: 1500
             });
             setTimeout(() => {
                 this.$router.push('/');

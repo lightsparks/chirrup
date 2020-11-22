@@ -9,6 +9,8 @@
 
         <form class="container_column">
 
+            <h1>Log in</h1>
+
             <div class="container_column">
                 <label for="input_login_user_name" class="input_container">Email address:</label>
                 <input v-model="userAuth.email" type="text" id="input_login_user_name" class="input_container">

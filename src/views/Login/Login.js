@@ -44,7 +44,7 @@ export default {
                     message: "User login succesful!",
                     type: "success",
                     position: "bottom",
-                    duration: 2000
+                    duration: 1500
                 });
                 setTimeout(() => {
                     this.$router.push("Home");
@@ -55,7 +55,8 @@ export default {
                 this.$toast.open({
                     message: "User login failed",
                     type: "error",
-                    position: "bottom"
+                    position: "bottom",
+                    duration: 1500
                 });
             });
         }

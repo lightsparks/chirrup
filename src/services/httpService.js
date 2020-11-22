@@ -12,8 +12,8 @@ export const messages = () => {
     return get([ "messages" ]);
 };
 
-export const sendNewMessage = () => {
-    return get([ "sendNewMessage" ]);
+export const sendNewMessage = (data) => {
+    return post([ "messages" ], data);
 };
 
 /**
@@ -64,7 +64,7 @@ function request(method, url = [], data = {}) {
             method,
             url: url.join("/"),
             data,
-            headers
+            headers,
         })
         .then((response) => {
             resolve(response);

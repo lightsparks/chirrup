@@ -5,42 +5,22 @@ export default {
     data() {
         return {
             components: {navbar},
-            message_error: {},
-            headers: {},
-            messages: {}
+            url: "https://twitterclone.tk/api/messages",
+            success: false,
+            messages_error: {},
+            message_data: [],
         }
     },
 
-    /*mounted: {
-        getMessage: function() {
-
-            messages().then(() => {
-
-            }).catch(() => {
-
-            });
-        },
-    },*/
-
     methods: {
-        getMessage: function() {
-
-            messages().then(() => {
-
-            }).catch(() => {
-
+        getMessages: function() {
+            messages().then((response) => {
+                this.message_data = response.data;
+                console.log(this.message_data);
+            }).catch(error => {
+                this.messages_error = error.response.data ? error.response.data : "";
+                console.log(this.messages_error);
             });
-        },
-        logOut: function() {
-            localStorage.removeItem('token');
-            this.$toast.open({
-                message: 'User logged out',
-                type: 'default',
-                position: 'bottom'
-            });
-            setTimeout(() => {
-                this.$router.push('/');
-            }, 1000);
         }
     },
 };

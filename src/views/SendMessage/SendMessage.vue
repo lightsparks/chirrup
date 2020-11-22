@@ -11,13 +11,10 @@
                             class="send-new-message"
                             placeholder="Type new message..."
                             maxlength="280"
-                            type="text"
-                            v-model="newMessage"
-                            autocomplete="off"
-                            autofocus
+                            v-model="message.message"
                     />
                     <div class="button-container">
-                        <button class="button" @click.prevent="send">Send Message</button>
+                        <button class="button" @click="sendMessage">Send Message</button>
                     </div>
 
                 </div>

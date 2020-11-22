@@ -48,7 +48,8 @@ export default {
                 this.$toast.open({
                     message: "New user registration succesful",
                     type: "success",
-                    position: "bottom"
+                    position: "bottom",
+                    duration: 1500
                 });
                 setTimeout(() => {
                     this.$router.push("Home");
