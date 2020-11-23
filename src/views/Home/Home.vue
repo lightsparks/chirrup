@@ -7,13 +7,21 @@
 
             <main class="app-main">
                 <button @click="getMessages" class="button">Refresh</button>
-                <!--<div class="feed-container" v-for="message in message_data">
-                    <div class="message-container" >
-                        <div class="message-content"></div>
-                        <div class="timestamp"></div>
-                        <div class="userID"></div>
-                    </div>
-                </div>-->
+                <ul class="message-data">
+                    <li v-for="item in message_data" :key="item">
+                        <div class="feed-messages-container">
+                            <div class="feed-messages-created_at">
+                                {{ item.created_at }}
+                            </div>
+                            <div class="feed-messages-id">
+                                {{ item.id }}
+                            </div>
+                            <div class="feed-messages-message">
+                                {{ item.message }}
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </main>
 
         </div>

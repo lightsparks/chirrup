@@ -16,6 +16,7 @@ export default {
         getMessages: function() {
             messages().then((response) => {
                 this.message_data = response.data;
+                this.message_data.reverse();
                 console.log(this.message_data);
             }).catch(error => {
                 this.messages_error = error.response.data ? error.response.data : "";
