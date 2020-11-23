@@ -6,17 +6,14 @@
             <navbar></navbar>
 
             <main class="app-main">
-                <button @click="getMessages" class="button">Refresh</button>
+                <button @click="getMessages" class="refresh-button">&#x21ba; Refresh</button>
                 <ul class="message-data">
                     <li v-for="item in message_data" :key="item">
                         <div class="feed-messages-container">
-                            <div class="feed-messages-created_at">
-                                {{ item.created_at }}
+                            <div class="created_at">{{ item.created_at }}
+                                <span class="id">{{ item.id }}</span>
                             </div>
-                            <div class="feed-messages-id">
-                                {{ item.id }}
-                            </div>
-                            <div class="feed-messages-message">
+                            <div class="message">
                                 {{ item.message }}
                             </div>
                         </div>
@@ -31,6 +28,7 @@
 
 <script>
     import navbar from "../../components/NavBar";
+
     export default {
         components: {navbar}
     }

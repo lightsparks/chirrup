@@ -113,7 +113,7 @@ main.app-main {
     flex-direction: column;
     border: 1px solid #277DA1;
     border-radius: 15px;
-    width: 60%;
+    width: 70%;
     padding: 25px;
 
 }
@@ -191,8 +191,47 @@ textarea.send-new-message:focus {
 
 /*** FEED ***/
 
+button.refresh-button {
+    align-self: center;
+    margin-top: 1em;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    width: 125px;
+    border-radius: 0.8em;
+    padding: 5px 12px 5px 10px;
+    font-size: 1em;
+    color: #FFFFFF;
+    background-color: #90BE6D;
+}
+
+ul.message-data > li {
+    width: 80%;
+}
+
 .feed-messages-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
     border: 1px solid #2c3e50;
     border-radius: 1em;
+}
+
+.created_at, .id, .message {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    text-align: left;
+}
+
+.created_at {
+    font-size: 0.8em;
+
+}
+
+.id {
+    font-size: 1.1em;
+}
+
+.message {
+    font-size: 1em;
 }
 

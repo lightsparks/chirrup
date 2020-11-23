@@ -1,4 +1,4 @@
-import { messages } from "@/services/httpService";
+import {messages} from "@/services/httpService";
 import navbar from "../../components/NavBar";
 
 export default {
@@ -13,7 +13,7 @@ export default {
     },
 
     methods: {
-        getMessages: function() {
+        getMessages: function () {
             messages().then((response) => {
                 this.message_data = response.data;
                 this.message_data.reverse();
