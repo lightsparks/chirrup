@@ -7,15 +7,13 @@
 
             <main class="app-main">
                 <button @click="getMessages" class="refresh-button">&#x21ba; Refresh</button>
+                <img src="/loader.gif" v-if="loading" />
                 <ul class="message-data">
-                    <li v-for="item in message_data" :key="item">
+                    <li v-for="item in message_data" :key="item.id">
                         <div class="feed-messages-container">
-                            <div class="created_at">{{ item.created_at }}
-                                <span class="id">{{ item.id }}</span>
-                            </div>
-                            <div class="message">
-                                {{ item.message }}
-                            </div>
+                            <sup class="created_at">{{ item.user.first_name }} {{ item.user.last_name }}:</sup>
+                            <div class="message">{{ item.message }}</div>
+                            <sup>{{ item.created_at }}</sup>
                         </div>
                     </li>
                 </ul>

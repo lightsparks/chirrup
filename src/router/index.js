@@ -31,21 +31,42 @@ const routes = [
     name: "Home",
     component: () =>
         import(/* webpackChunkName: "Home" */ '../views/Home/Home.vue'),
-    meta: {requiresAuth: true}
+    meta: {requiresAuth: true, navigation: true}
   },
   {
     path: "/SendMessage",
-    name: "SendMessage",
+    name: "Send Message",
     component: () =>
         import(/* webpackChunkName: "SendMessage" */ '../views/SendMessage/SendMessage.vue'),
-    meta: {requiresAuth: true}
+    meta: {requiresAuth: true, navigation: true}
+  },
+  {
+    path: "/Friends",
+    name: "Friends",
+    component: () =>
+        import(/* webpackChunkName: "Friends" */ '../views/Friends/Friends.vue'),
+    meta: {requiresAuth: true, navigation: true}
+  },
+  {
+    path: "/FindFriends",
+    name: "Find Friends",
+    component: () =>
+        import(/* webpackChunkName: "FindFriends" */ '../views/FindFriends/FindFriends.vue'),
+    meta: {requiresAuth: true, navigation: true}
+  },
+  {
+    path: "/Account",
+    name: "Account",
+    component: () =>
+        import(/* webpackChunkName: "Account" */ '../views/Home/Home.vue'),
+    meta: {requiresAuth: true, navigation: true}
   },
   {
     path: "/Logout",
     name: "Logout",
     component: () =>
         import(/* webpackChunkName: "Logout" */ '../views/Logout/Logout.vue'),
-    meta: {requiresAuth: true}
+    meta: {requiresAuth: true, navigation: true}
   },
   {
     path: "/404",

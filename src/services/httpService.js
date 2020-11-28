@@ -16,6 +16,14 @@ export const sendNewMessage = (data) => {
     return post([ "messages" ], data);
 };
 
+export const getFriends = (data) => {
+    return get([ "friends" ], data);
+};
+
+export const findfriend = (data) => {
+    return get([ "users", "find" ], data);
+};
+
 /**
  * Post Request
  *

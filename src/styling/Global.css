@@ -1,11 +1,28 @@
 * {
     box-sizing: border-box;
     margin: 6px;
-    padding: 6px;
+    padding: 3px;
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
+}
+
+body, html{
+    margin:0;
+    padding: 0;
+}
+
+#app{
+
+    margin: 0;
+    height: 100vh;
+}
+
+.main-container-supermain{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
 }
 
 /*** TOAST STYLING ***/
@@ -60,44 +77,6 @@ a {
     opacity: 0
 }
 
-/*** Navigation ***/
-
-nav.app-nav {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 5px;
-    align-items: start;
-    width: 20%;
-}
-
-nav.app-nav a, button {
-    padding: 0px;
-    margin: 0px;
-}
-
-#nav {
-    padding: 30px;
-}
-
-#nav a {
-    font-weight: bold;
-    color: #577590;
-}
-
-#nav a.router-link-exact-active {
-    color: #90BE6D;
-
-}
-
-.btnless:hover {
-    cursor: pointer;
-}
-
-.logout {
-    margin-top: 30px;
-    color: lightgrey;
-}
 
 /*** MAIN ***/
 
@@ -111,17 +90,16 @@ nav.app-nav a, button {
 main.app-main {
     display: flex;
     flex-direction: column;
-    border: 1px solid #277DA1;
-    border-radius: 15px;
-    width: 70%;
-    padding: 25px;
+/*    border: 1px solid #277DA1;
+    border-radius: 15px;*/
+    width: 480px;
+    padding: 10px;
 
 }
 
 .app-main.button {
     width: 50px;
 }
-
 
 .main {
     margin: auto;
@@ -131,7 +109,7 @@ main.app-main {
     margin-bottom: 12px;
 }
 
-.message-container {
+.message-container::after {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -165,6 +143,7 @@ textarea.send-new-message:focus {
     width: 150px;
     border-radius: 0.8em;
     padding: 5px 10px 5px 10px;
+    cursor: pointer;
 }
 
 .button:focus {
@@ -176,9 +155,11 @@ textarea.send-new-message:focus {
 
 .App_footer {
     position: fixed;
-    bottom: 15px;
+    bottom: 0;
     left: 0;
     right: 0;
+    margin: 0;
+    background-color: #fff;
 }
 
 .footer-container {
@@ -193,15 +174,13 @@ textarea.send-new-message:focus {
 
 button.refresh-button {
     align-self: center;
-    margin-top: 1em;
-    margin-right: 1em;
-    margin-bottom: 2em;
-    width: 125px;
+    width: 72%;
     border-radius: 0.8em;
     padding: 5px 12px 5px 10px;
     font-size: 1em;
     color: #FFFFFF;
     background-color: #90BE6D;
+    cursor: pointer;
 }
 
 ul.message-data > li {
