@@ -1,0 +1,40 @@
+/*** Navigation ***/
+
+nav.app-nav {
+    position: fixed;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 5px;
+    align-items: start;
+    min-width: 120px;
+}
+
+nav.app-nav a, button {
+    padding: 0px;
+    margin: 0px;
+}
+
+#nav {
+    padding: 30px;
+}
+
+#nav a {
+    font-weight: bold;
+    color: #577590;
+}
+
+#nav a.router-link-exact-active {
+    color: #90BE6D;
+
+}
+
+.btnless:hover {
+    cursor: pointer;
+}
+
+.logout {
+    margin-top: 30px;
+    color: lightgrey;
+}
