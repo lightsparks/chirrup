@@ -20,6 +20,7 @@ export default {
 
     methods: {
         getMessages: function () {
+            this.message_data = [];
             messages().then((response) => {
                 this.message_data = response.data.map(item => Object.assign(item, {created_at: format(item.created_at)}));
                 this.loading = false;

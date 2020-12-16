@@ -67,13 +67,20 @@ function request(method, url = [], data = {}) {
         Authorization: `Bearer ${ token }`
     };
 
+    const config = {
+        method,
+        url: url.join("/"),
+        headers,
+    };
+
+    if(method === 'GET'){
+        config.params = data;
+    }else{
+        config.data = data;
+    }
+
     return new Promise((resolve, reject) => {
-        axios({
-            method,
-            url: url.join("/"),
-            data,
-            headers,
-        })
+        axios(config)
         .then((response) => {
             resolve(response);
 
