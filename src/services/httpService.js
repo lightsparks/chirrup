@@ -16,7 +16,7 @@ export const sendNewMessage = (data) => {
     return post([ "messages" ], data);
 };
 
-export const getFriends = (data) => {
+export const getfriends = (data) => {
     return get([ "friends" ], data);
 };
 
@@ -28,8 +28,12 @@ export const connectfriend = (data) => {
     return post([ "friends" ], data);
 };
 
+export const deletefriend = (data) => {
+    return delete([ "friends" ], data);
+};
+
 /**
- * Post Request
+ * POST Request
  *
  * @param params
  * @returns {Promise<unknown>}
@@ -39,7 +43,7 @@ function post(...params) {
 }
 
 /**
- * Get Request
+ * GET Request
  *
  * @param params
  * @returns {Promise<unknown>}
@@ -47,6 +51,20 @@ function post(...params) {
 function get(...params) {
     return request("GET", ...params);
 }
+
+/*
+
+/!**
+ * DELETE Request
+ *
+ * @param params
+ * @returns {Promise<unknown>}
+ *!/
+function delete(...params) {
+    return request("DELETE", ...params);
+}
+*/
+
 
 /**
  * Generic request method

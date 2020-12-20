@@ -1,27 +1,26 @@
 import navbar from "../../components/NavBar";
-import {getFriends} from "../../services/httpService";
+import {getfriends} from "../../services/httpService";
 
 export default {
     data() {
         return {
             components: {navbar},
-            url: "http://twitterclone-dev.tk/api/friends",
             success: false,
             friends_error: {},
             friends_data: () => [],
         }
     },
 
-/*    mounted: function() {
-
-    },*/
+    mounted: function () {
+        this.getFriends();
+    },
 
     methods: {
-        getFriendsList: function () {
-            getFriends().then((response) => {
+        getFriends: function () {
+            getfriends().then((response) => {
                 console.log(response.data)
                 this.friends_data = response.data;
-/*                this.friends_data.reverse();*/
+                this.success = true;
             }).catch(error => {
                 this.friends_error = error.response.data ? error.response.data : "";
                 console.log(this.friends_error);

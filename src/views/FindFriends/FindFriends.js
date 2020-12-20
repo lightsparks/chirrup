@@ -1,5 +1,5 @@
 import navbar from "../../components/NavBar";
-import {connectfriend, findfriend} from "../../services/httpService";
+import {connectfriend, findfriend, deletefriend} from "../../services/httpService";
 
 export default {
     data() {
@@ -12,7 +12,6 @@ export default {
             friendslist_error: {},
             friendslist_data: () => [],
             connection_error: null,
-            user_id: null
         }
     },
 
@@ -27,8 +26,16 @@ export default {
                 console.log(this.friendslist_error);
             });
         },
-        connectFriend: function () {
-            connectfriend(this.user_id).then((response) => {
+        connectFriend: function (itemID) {
+            connectfriend({user_id: itemID}).then((response) => {
+                console.log(response);
+            }).catch(error => {
+                this.connection_error = error.response ? error.response.data : "";
+                console.log(this.connection_error);
+            });
+        },
+        deleteFriend: function (itemID) {
+            deletefriend({user_id: itemID}).then((response) => {
                 console.log(response);
             }).catch(error => {
                 this.connection_error = error.response ? error.response.data : "";

@@ -6,9 +6,17 @@
             <navbar></navbar>
 
             <main class="app-main">
-
-                <!--<button @click="getFriendsList" class="refresh-button">List Friends</button>-->
-
+                <img src="/loader.gif" v-if="loading" />
+                <div class="container_column">
+                    <ul class="message-data">
+                        <li v-for="item in friends_data" :key="item.id">
+                            <div class="feed-messages-container">
+                                <div class="message">{{ item.first_name }} {{ item.last_name }}</div>
+                                <sup>{{ item.email }}</sup>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </main>
 
         </div>
