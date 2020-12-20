@@ -24,6 +24,10 @@ export const findfriend = (data) => {
     return get([ "users", "find" ], data);
 };
 
+export const connectfriend = (data) => {
+    return post([ "friends" ], data);
+};
+
 /**
  * Post Request
  *
