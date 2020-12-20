@@ -12,11 +12,13 @@ export default {
             friendslist_error: {},
             friendslist_data: () => [],
             connection_error: null,
+            message: 'No users to show.'
         }
     },
 
     methods: {
         findFriend: function () {
+            this.friendslist_data = [],
             findfriend(this.search_for).then((response) => {
                 console.log(response);
                 this.friendslist_data = response.data;

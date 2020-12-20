@@ -29,6 +29,14 @@
                         </ul>
                     </div>
 
+                    <div v-if="!friendslist_data.length" class="message-data">
+                        <div class="feed-messages-container">
+                            <div class="message">
+                                {{ message }}
+                            </div>
+                        </div>
+                    </div>
+
                 </form>
             </main>
 
